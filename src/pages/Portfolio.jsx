@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+﻿import { useEffect, useMemo, useRef, useState } from "react";
 import {
   FaArrowRight,
   FaCode,
@@ -32,7 +32,7 @@ function Navbar() {
           aria-label="Toggle navigation"
           aria-expanded={open}
         >
-          ☰
+          â˜°
         </button>
         <div className={`nav-links ${open ? "open" : ""}`}>
           {["Home", "Work", "About", "Skills", "Journey", "Contact"].map(
@@ -48,7 +48,7 @@ function Navbar() {
           )}
         </div>
         <a className="resume" href="#contact">
-          Available to connect <span>↗</span>
+          Available to connect <span>â†—</span>
         </a>
       </nav>
     </header>
@@ -82,14 +82,14 @@ function Hero({ content }) {
           </div>
           <div className="status">
             <b>Open to opportunities</b>
-            <span>Internships · freelance · collaborations</span>
+            <span>Internships Â· freelance Â· collaborations</span>
           </div>
         </div>
         <div className="portrait-stage">
           <div className="orbit one" />
           <div className="orbit two" />
           <img
-            src="/assets/profile/hero_main_orange_ring.webp"
+            src={`${import.meta.env.BASE_URL}assets/profile/hero_main_orange_ring.webp`}
             alt="MD Salman"
           />
           <div className="float-icon f1">
@@ -172,7 +172,7 @@ function Featured({ project }) {
               <span>Live weather, explained simply.</span>
             </div>
             <div className="weather-temp">
-              24°<small>Ahmedabad · Clear</small>
+              24Â°<small>Ahmedabad Â· Clear</small>
             </div>
             <div className="weather-note">
               Project media is ready to be added from the CMS.
@@ -182,7 +182,7 @@ function Featured({ project }) {
       </div>
       <div className="featured-meta">
         <div>
-          <span>AI · WEATHER · PRODUCT</span>
+          <span>AI Â· WEATHER Â· PRODUCT</span>
           <h3>{project?.title || "WeatherGPT"}</h3>
         </div>
         <div className="project-links">
@@ -261,7 +261,7 @@ function Portfolio() {
                 </h2>
               </div>
               <p>
-                Real projects from my learning and development journey—presented
+                Real projects from my learning and development journeyâ€”presented
                 simply, without made-up metrics.
               </p>
             </div>
@@ -285,7 +285,7 @@ function Portfolio() {
                         .slice(0, 2)}
                     </div>
                   )}
-                  <span>{p.category || "WEB · DEVELOPMENT"}</span>
+                  <span>{p.category || "WEB Â· DEVELOPMENT"}</span>
                 </div>
                 <div className="project-info">
                   <div>
@@ -320,7 +320,7 @@ function Portfolio() {
           <Reveal className="portrait-card">
             <img
               loading="lazy"
-              src="/assets/profile/about_professional_office.webp"
+              src={`${import.meta.env.BASE_URL}assets/profile/about_professional_office.webp`}
               alt="MD Salman in a professional setting"
             />
             <div className="portrait-label">
@@ -342,10 +342,10 @@ function Portfolio() {
             <div className="facts">
               <div>
                 <strong>02</strong>
-                <span>Year · B.Tech CSE</span>
+                <span>Year Â· B.Tech CSE</span>
               </div>
               <div>
-                <strong>∞</strong>
+                <strong>âˆž</strong>
                 <span>Room to learn</span>
               </div>
             </div>
@@ -451,7 +451,7 @@ function Portfolio() {
                 <div>PDF</div>
                 <span>{c.issuer || "Certificate"}</span>
                 <h3>{c.title}</h3>
-                <b>View certificate ↗</b>
+                <b>View certificate â†—</b>
               </a>
             ))}
           </div>
@@ -462,18 +462,18 @@ function Portfolio() {
               <div className="contact-orb" />
               <img
                 loading="lazy"
-                src="/assets/profile/profile_friendly_yellow.webp"
+                src={`${import.meta.env.BASE_URL}assets/profile/profile_friendly_yellow.webp`}
                 alt="MD Salman"
               />
               <span>08 / LET'S TALK</span>
               <h2>
-                Let’s build something
+                Letâ€™s build something
                 <br />
                 <em>people remember.</em>
               </h2>
               <p>
                 Have an internship, a thoughtful web project, or an idea worth
-                exploring? I’d love to hear about it.
+                exploring? Iâ€™d love to hear about it.
               </p>
               <div className="contact-actions">
                 <SpecularButton href={`mailto:${contact.email}`}>
@@ -504,10 +504,11 @@ function Portfolio() {
         <a className="brand" href="#home">
           salman<span>.</span>
         </a>
-        <p>© 2026 MD Salman · Designed and built with intention.</p>
+        <p>Â© 2026 MD Salman Â· Designed and built with intention.</p>
         <span>{isSupabaseConfigured ? "CMS connected" : "CMS-ready"}</span>
       </footer>
     </>
   );
 }
 export default Portfolio;
+
