@@ -145,9 +145,9 @@ function Featured({ project }) {
       <div className="section-kicker">02 / FEATURED PROJECT</div>
       <div className="featured-head">
         <h2>
-          {project?.title || "Featured project"}
+          Forecasting,
           <br />
-          <em>{project?.category || "Selected work"}</em>
+          <em>reimagined.</em>
         </h2>
         <p>{project?.summary}</p>
       </div>
@@ -168,11 +168,11 @@ function Featured({ project }) {
         ) : (
           <div className="weather-placeholder">
             <div className="weather-top">
-              <span>{project?.title || "Featured project"}</span>
-              <span>{project?.category || "Selected work"}</span>
+              <span>WeatherGPT</span>
+              <span>Live weather, explained simply.</span>
             </div>
             <div className="weather-temp">
-              LIVE<small>Selected project · 2026</small>
+              24°<small>Ahmedabad · Clear</small>
             </div>
             <div className="weather-note">
               Project media is ready to be added from the CMS.
@@ -182,8 +182,8 @@ function Featured({ project }) {
       </div>
       <div className="featured-meta">
         <div>
-          <span>{project?.category || "FEATURED PROJECT"}</span>
-          <h3>{project?.title || "Featured project"}</h3>
+          <span>AI · WEATHER · PRODUCT</span>
+          <h3>{project?.title || "WeatherGPT"}</h3>
         </div>
         <div className="project-links">
           {project?.live_url && (
@@ -297,40 +297,20 @@ function Portfolio() {
                       ))}
                     </div>
                   </div>
-                  <div className="project-actions">
-  {p.live_url && (
-    <a
-      className="project-action live"
-      href={p.live_url}
-      target="_blank"
-      rel="noreferrer"
-      aria-label={`Open ${p.title} live project`}
-    >
-      <span>Live</span>
-      <FaArrowRight />
-    </a>
-  )}
-
-  {p.github_url && (
-    <a
-      className="project-action github"
-      href={p.github_url}
-      target="_blank"
-      rel="noreferrer"
-      aria-label={`Open ${p.title} GitHub repository`}
-    >
-      <FaGithub />
-      <span>GitHub</span>
-    </a>
-  )}
-
-  {!p.live_url && !p.github_url && (
-    <span className="project-action unavailable">
-      <FaCode />
-      <span>Private</span>
-    </span>
-  )}
-</div>
+                  <div className="round-link">
+                    {p.live_url ? (
+                      <a
+                        href={p.live_url}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Open ${p.title}`}
+                      >
+                        <FaArrowRight />
+                      </a>
+                    ) : (
+                      <FaCode />
+                    )}
+                  </div>
                 </div>
               </SpotlightCard>
             ))}
@@ -353,7 +333,7 @@ function Portfolio() {
             <h2>
               Not just code.
               <br />
-              <em>Curiosity too.</em>
+              <em>Personality too.</em>
             </h2>
             <p>{content.about?.text || defaults.about.text}</p>
             <p className="proximity">
@@ -361,12 +341,12 @@ function Portfolio() {
             </p>
             <div className="facts">
               <div>
-                <strong>2nd Year</strong>
-                <span>B.Tech CSE</span>
+                <strong>02</strong>
+                <span>Year · B.Tech CSE</span>
               </div>
               <div>
                 <strong>∞</strong>
-                <span>Always Learning</span>
+                <span>Room to learn</span>
               </div>
             </div>
           </Reveal>

@@ -145,9 +145,9 @@ function Featured({ project }) {
       <div className="section-kicker">02 / FEATURED PROJECT</div>
       <div className="featured-head">
         <h2>
-          {project?.title || "Featured project"}
+          Forecasting,
           <br />
-          <em>{project?.category || "Selected work"}</em>
+          <em>reimagined.</em>
         </h2>
         <p>{project?.summary}</p>
       </div>
@@ -168,11 +168,11 @@ function Featured({ project }) {
         ) : (
           <div className="weather-placeholder">
             <div className="weather-top">
-              <span>{project?.title || "Featured project"}</span>
-              <span>{project?.category || "Selected work"}</span>
+              <span>WeatherGPT</span>
+              <span>Live weather, explained simply.</span>
             </div>
             <div className="weather-temp">
-              LIVE<small>Selected project · 2026</small>
+              24°<small>Ahmedabad · Clear</small>
             </div>
             <div className="weather-note">
               Project media is ready to be added from the CMS.
@@ -182,8 +182,8 @@ function Featured({ project }) {
       </div>
       <div className="featured-meta">
         <div>
-          <span>{project?.category || "FEATURED PROJECT"}</span>
-          <h3>{project?.title || "Featured project"}</h3>
+          <span>AI · WEATHER · PRODUCT</span>
+          <h3>{project?.title || "WeatherGPT"}</h3>
         </div>
         <div className="project-links">
           {project?.live_url && (
