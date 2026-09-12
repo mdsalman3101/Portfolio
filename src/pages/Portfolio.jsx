@@ -241,7 +241,7 @@ function Portfolio() {
     () => projects.find((p) => p.featured) || projects[0],
     [projects],
   );
-  const selected = projects.filter((p) => p.id !== featured?.id).slice(0, 4);
+  const selected = projects.filter((p) => p.id !== featured?.id);
   const contact = content.contact || defaults.contact;
   return (
     <>
